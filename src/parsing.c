@@ -6,7 +6,7 @@
 /*   By: kel-hadd <kel-hadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 00:21:21 by kel-hadd          #+#    #+#             */
-/*   Updated: 2026/09/15 01:21:00 by kel-hadd         ###   ########.fr       */
+/*   Updated: 2026/09/18 06:22:31 by kel-hadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ static int	parse_number(const char *s, long *out, long min)
 	int		digit;
 
 	n = 0;
+	if (!*s)
+		return (0);
+	if (*s == '+')
+		s++;
 	if (!*s)
 		return (0);
 	while (*s >= '0' && *s <= '9')
